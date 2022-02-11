@@ -12,9 +12,9 @@ function Card(props) {
   return (
   <div className='card'>
     {badgeText && <div className='card-badge'>{badgeText}</div>}
-      <img src={`images/${props.data.coverImg}`} className='card-img'/>
+      <img src={process.env.PUBLIC_URL + `/images/${props.data.coverImg}`} className='card-img'/>
       <div className='card-stats'>
-         <img className='card-star' src="images/star.png" alt="Star" /> 
+         <img className='card-star' src={process.env.PUBLIC_URL + "/images/star.png"} alt="Star" /> 
          <span>{props.data.stats.rating}</span>
          <span className='gray'>({props.data.stats.reviewCount})</span>
          <span className='gray'>{props.data.location}</span>
